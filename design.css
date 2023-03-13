@@ -1,13 +1,20 @@
 
-h1{
-
-    font-family: "Comic Sans MS";
-    color:blueviolet;
-    font-size: 45px;
+html {
+    background-color: rgb(47,47,32);
 }
-table, th, td {
-    
-    border: 2px solid black; border-collapse: collapse;
+
+h1 {
+  font-size: 40px; 
+  color: black 
+}
+
+th, td {
+    border: 3px solid lime; 
+    border-radius: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .center {
     margin-left: auto;
@@ -16,5 +23,25 @@ table, th, td {
 .text {
     size: 20px;
     font-family: 'Franklin Gothic Medium', Arial, sans-serif;
-    color: black;
+    color: white;
+}
+a:link {
+    color:white;
+    background-color: transparent;
+    text-decoration: underline;
+}
+a:visited {
+    color:pink;
+    background-color: transparent;
+    text-decoration: underline;
+}
+a:hover {
+    color:red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+a:active {
+    color:green;
+    background-color: transparent;
+    text-decoration: underline;
 }
