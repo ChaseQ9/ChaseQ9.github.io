@@ -22,8 +22,12 @@ th, td {
 }
 .text {
     size: 20px;
-    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+    font-family: "Didot";
     color: white;
+}
+a {
+    size:20px;
+    font-family: "Didot";
 }
 a:link {
     color:white;
@@ -31,7 +35,7 @@ a:link {
     text-decoration: underline;
 }
 a:visited {
-    color:pink;
+    color:white;
     background-color: transparent;
     text-decoration: underline;
 }
