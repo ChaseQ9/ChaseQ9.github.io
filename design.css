@@ -1,11 +1,16 @@
 
 html {
-    background-color: rgb(47,47,32);
+    background-color: #28282B;
 }
 
 h1 {
   font-size: 40px; 
   color: black 
+}
+img {
+    width:30%;
+    height:auto;
+    border-radius: 80%;
 }
 
 th, td {
@@ -16,13 +21,19 @@ th, td {
     padding-top: 10px;
     padding-bottom: 10px;
 }
+.topleft{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    float: left;
+}
 .center {
     margin-left: auto;
     margin-right: auto;
 }
 .text {
-    size: 20px;
-    font-family: "Didot";
+    size: 22px;
+    font-family: 'Titillium Web';
     color: white;
 }
 a {
@@ -48,4 +59,24 @@ a:active {
     color:green;
     background-color: transparent;
     text-decoration: underline;
+}
+.typewriter h1 {
+    font-weight: bold;
+    overflow: hidden;
+    border-right:.15em ;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .10em;
+    color:lime;
+    animation: 
+        typing 3s steps(40,end),
+        blink-caret .75s step-end infinite;
+}
+@keyframes typing {
+    from{width: 0;}
+    to{width:100%}
+}
+@keyframes blink-caret {
+    from, to {border-color: transparent;}
+    50% {border-color: orange;}
 }
