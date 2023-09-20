@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <!--Links to script sheet, and stylesheet as well as favicon info-->
-    <title>Chases Website</title>
+    <title>Chase Quigley</title>
     <link rel="icon" href="favicon_stuff/favicon.ico">
     <script src="script.js"></script>
     <link rel="styleSheet" href="design.css">
@@ -11,34 +11,58 @@
 </head>
 <!--onload="load() ADD TO BODY TAG--> 
 <body>
-    
-    <!--Top navigation Bar-->
-    <header class="head">
-        <div class="pfp">
-            <img src="photos/Chase_France.jpg" alt="Chase in France">
-                
-            </img>
-        </div>
-        <span id="headName"> <a href="">CHASE QUIGLEY</a></span>
-        <nav id="navbar">
+    <div id="wrapper">
+        <!--Top navigation Bar-->
+        <header class="head">
+            <div class="pfp">
+                <a href="">
+                    <img src="photos/Chase_France.jpg" alt="Chase in France">
+                        
+                    </img>
+                </a>
+            </div>
+            <span id="headName"> <a href="">CHASE QUIGLEY </a></span>
+            <nav id="navbar">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About Me</a></li>
+                    <li><a href="">Socials </a></li>
+                    <li><a href="">Projects</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <!--Nav Bar Creation-->
+        <nav id="socials">
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About Me</a></li>
-                <li><a href="">Socials </a></li>
-                <li><a href="">Projects</a></li>
+                <li><a href="https://www.linkedin.com/in/chase-quigley-1ab310245"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="https://www.instagram.com/chas_quigley/"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://github.com/ChaseQ9"><i class="fa-brands fa-github"></i></a></li>
             </ul>
         </nav>
-    </header>
     
-    <!--BODY INFORMATION GOES HERE-->
-    <hr id="bottom-line">
-    <p id="copyright">&copy Copyright 2023. Designed by Chase Quigley</p>
-    <nav id="socials">
-        <ul>
-            <li><a href="https://www.linkedin.com/in/chase-quigley-1ab310245"><i class="fa-brands fa-linkedin"></i></a></li>
-            <li><a href="https://www.instagram.com/chas_quigley/"><i class="fa-brands fa-instagram"></i></a></li>
-            <li><a href="https://github.com/ChaseQ9"><i class="fa-brands fa-github"></i></a></li>
-        </ul>
-    </nav>
+        <div class="container">
+            <h1 id="intro">Hi, I am </h1>
+            <div class="typewriter" id="typeText"> CHASE QUIGLEY</div>
+        </div>
+
+        <div id="info">
+            Get To Know Me
+            <hr class="design-line">
+            <pre class="desc">
+    As seen above, my name is Chase Quigley. I am a student at the University of Massachusetts Boston.
+    I am a computer science major with a particular interst in the evolutionary technology of A.I as 
+    well as the evolving field of cybersecurity. I enjoy keeping up to date with the latest technological
+    developments in our world (GPT-5 soon??). Outside of school, I am employed as a technology specialist
+    at Genesis of Braintree. Currently, my hobbiees include playing video games, spending time with friends
+    and family, and also traveling and experiencing what the world has to offer.
+            </pre>
+        </div>
+
+        <footer>
+            <hr id="bottom-line">
+            <p id="copyright">&copy Copyright 2023. Designed by Chase Quigley</p>
+        </footer>
+    </div>
 </body>
 </html>

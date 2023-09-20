@@ -1,8 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap");
 
+@font-face {
+    src: url(fonts/Quicksand-VariableFont_wght.ttf);
+    font-family: Quicksand;
+}
+@font-face {
+    src: url(fonts/JosefinSans-VariableFont_wght.ttf);
+    font-family: Josefin;
+}
 html {
     background-color: hsl(330, 5%, 8%);
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Josefin', 'Quicksand', sans-serif;
 }
 :root {
     --link-highlight: hsl(344, 77%, 15%)
@@ -17,21 +24,14 @@ body {
     overflow-x: hidden;
 }
 
-h1 {
-    margin: 0px;
-    padding: 0px;
-    border: 2px solid red;
-    position: relative;
-    left: 75px;
-    display:inline-block;
-    
-}
 
 .head {
     border-bottom: 2px solid white;
     background-color: black;
-    width: 100%;
-    height: 10vh;
+    max-width: 100%;
+    max-height: 100%;
+    height: 120px;
+    
 }
 .pfp {
     position: relative;
@@ -39,8 +39,8 @@ h1 {
     width: 60px;
     height: 60px;
     left: 25px;
-    top: 20px;
-    border: 2px solid white;
+    top: 40px;
+    border: 1px dashed hsl(0, 0%, 50%);
     border-radius: 50%;
     text-align: center;
     display: inline-block;
@@ -54,21 +54,40 @@ h1 {
     object-fit: cover;
 }
 
+#wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width:100%;
+    height: 100%;
+    max-height: 100%;
+    max-width: 100%;
+}
+
 #navbar {
     position: relative;
-    left: 70%;
-    bottom: 40px;
+    float: right;
+    left: auto;
+    top: 48px;
+    margin-left: 100px;
+    max-width: 100%;
+    width: auto;
+    max-height: 100%;
+    display: inline
 }
 nav ul {
     list-style-type: none;
     overflow: hidden;
+    width:auto;
 }
 nav li {
     float:left;
     margin-right: 30px;
     font-size: 1.5em;
 }
-
+#title {
+    text-align:center;
+    font-size: 2.0em;
+}
 
 #navbar a:hover {
     color:var(--link-highlight);
@@ -78,7 +97,7 @@ nav li {
     position: relative;
     font-weight: bold;
     left: 40px;
-    top: 10px;
+    top: 30px;
     font-size: 1.5em;
 }
 
@@ -88,47 +107,94 @@ nav li {
 
 #bottom-line {
     position:relative;
-    top: 80vh;
-    margin-left: 100px;
-    margin-right: 100px;
+    top: 68vh;
+    width: 90%;
+    max-width: 100%;
+    border: 2px solid var(--link-highlight);
+}
+.design-line {
+    border: 2px solid darkgreen;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 5%;
+    margin-top: 5px;
+}
+
+.desc {
+    font-size: .6em;
+    font-weight: 300;
 }
 
 #socials {
     position:relative;
-    top: 70vh;
-    left: 3%
+    max-width: 100%;
+    max-height: 100%;
+    margin: 50px;
+    top: 90vh;
+    left: 8%
 }
 
 #socials a:hover {
     color: var(--link-highlight)
 }
 
-.typewriter h1 {
-    font-weight: bold;
-    overflow: hidden;
-    border-right:.15em ;
-    white-space: nowrap;
-    margin: 0 auto;
-    letter-spacing: .10em;
-    color:lime;
-    animation: 
-        typing 2s steps(40,end),
-        blink-caret .75s step-end infinite;
+.typewriter {
+   overflow: hidden;
+   border-right: .15em solid orange;
+   white-space: nowrap;
+   font-size: 4.0em;
+   font-weight: bold;
+   width: 0;
+   text-shadow: 10px 10px 7px var(--link-highlight);
+   color: white;
+   animation: 
+    typing 1s steps(20, end) forwards,
+    blink .9s infinite;
 }
+
+.container {
+    display:inline-block;
+    position: relative;
+    max-width: 100%;
+    left: -10%;
+}
+
+#intro {
+    position: relative;
+    right: 100px;
+    color: white;
+    font-size: 3.0em;
+    font-weight:350;
+}
+
+#info {
+    position: relative;
+    display: inline;
+    margin-top: 30%;
+    margin-left: 3%;
+    text-align: center;
+    float: left;
+    font-size: 2.0em;
+    color: white;
+    font-weight: 800;
+}
+
 @keyframes typing {
     from{width: 0;}
     to{width:100%}
 }
-@keyframes blink-caret {
-    from, to {border-color: transparent;}
-    50% {border-color: orange;}
+@keyframes blink {
+    from {border-color: white}
+    to {border-color: var(--link-highlight);}
 }
-
 
 #copyright {
     position:relative;
-    top: 82vh;
-    left: 45%;
+    max-width: 100%;
+    max-height: 100%;
+    top: 70vh;
+    padding-bottom: 20px;
+    left: 42%;
     font-size: .8em;
     color: white;
 }
