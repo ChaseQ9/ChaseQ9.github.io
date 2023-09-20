@@ -57,6 +57,9 @@ body {
 #wrapper {
     margin-left: auto;
     margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width:100%;
     height: 100%;
     max-height: 100%;
@@ -108,8 +111,9 @@ nav li {
 #bottom-line {
     position:relative;
     top: 68vh;
-    width: 90%;
-    max-width: 100%;
+    left: 19%;
+    width: 100%;
+    margin: 0px;
     border: 2px solid var(--link-highlight);
 }
 .design-line {
@@ -194,7 +198,7 @@ nav li {
     max-height: 100%;
     top: 70vh;
     padding-bottom: 20px;
-    left: 42%;
+    left: 20%;
     font-size: .8em;
     color: white;
 }
