@@ -1,0 +1,67 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-family: 'Roboto'
+}
+#top {
+    background-size: contain;
+    background-image: url(Travel_Photos/World.jpeg);
+    background-repeat: 1;
+}
+#belowHR {
+    background-color: hsl(0, 19%, 20%);
+    
+}
+#seperationBar {
+    height:10px;
+    margin:0px;
+    background-color: white;
+
+}
+#pfp {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-height: 35vh;
+    border-radius:45%;
+    border: 5px solid white;
+    cursor:pointer;
+}
+#images {
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    width: 80%;
+}
+#images img {
+    max-height: 30vh;
+    border-radius: 25px;;
+}
+.photo {
+    cursor: pointer;
+    margin-top: 100px;
+    margin-right: 30px;
+    margin-left: 30px;
+    border: 10px solid white
+}
+.photo:hover {
+    transform: scale(1.2);
+}
+#pfp:hover {
+    border: 5px solid white;
+    transform:scale(1.05);
+}
+
+.center {
+    text-align: center;
+    font-size: 5rem;
+}
+
+img.center {
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+}

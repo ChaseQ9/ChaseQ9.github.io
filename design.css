@@ -12,7 +12,8 @@ html {
     font-family: 'Josefin', 'Quicksand', sans-serif;
 }
 :root {
-    --link-highlight: hsl(344, 77%, 15%)
+    --link-hightlight: hsl(344, 77%, 15%); /* Fallback Color */
+    --link-highlight: rgb(150,0,0);
 }
 a {
     text-decoration: none;
