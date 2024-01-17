@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 html {
-    background-color: black;
+    background-color: hsl(330, 5%, 8%);
     color: white;
     font-weight: bold;
     font-family: 'Roboto'
@@ -13,7 +13,7 @@ html {
     background-repeat: 1;
 }
 #belowHR {
-    background-color: hsl(0, 19%, 20%);
+    background-color: hsl(330, 5%, 8%);
     
 }
 #seperationBar {
@@ -23,9 +23,8 @@ html {
 
 }
 #pfp {
-    margin-top: 50px;
     margin-bottom: 50px;
-    max-height: 35vh;
+    max-height: 30vh;
     border-radius:45%;
     border: 5px solid white;
     cursor:pointer;
