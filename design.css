@@ -45,6 +45,7 @@ body {
     border-radius: 50%;
     text-align: center;
     display: inline-block;
+    cursor: pointer;
 }
 .pfp img{
     width: 100px;

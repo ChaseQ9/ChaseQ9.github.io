@@ -7,6 +7,24 @@ html {
     font-weight: bold;
     font-family: 'Roboto'
 }
+#homeButton {
+    margin-top: 25px;
+    width: 10%;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 15px;
+    text-align: center;
+}
+#homeReturn {
+    font-family: 'Roboto';
+    font-style: normal;
+    color: white;
+    text-decoration: none;
+}
+#homeReturn:hover {
+    color: lightblue;
+}
+
 #top {
     background-size: contain;
     background-repeat: 1;
