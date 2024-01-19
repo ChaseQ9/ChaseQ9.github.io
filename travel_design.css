@@ -9,8 +9,9 @@ html {
 }
 #top {
     background-size: contain;
-    background-image: url(Travel_Photos/World.jpeg);
     background-repeat: 1;
+    background-size: 55%;
+    background-image: url(Travel_Photos/World.jpeg);
 }
 #belowHR {
     background-color: hsl(330, 5%, 8%);
@@ -28,6 +29,9 @@ html {
     border-radius:45%;
     border: 5px solid white;
     cursor:pointer;
+}
+#headerText {
+    font-size: 2rem;
 }
 #images {
     margin-left: auto;
