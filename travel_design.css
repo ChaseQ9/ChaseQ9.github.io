@@ -18,7 +18,7 @@ html {
     
 }
 #seperationBar {
-    height:10px;
+    height:6px;
     margin:0px;
     background-color: white;
 
@@ -52,6 +52,8 @@ html {
 }
 .photo:hover {
     transform: scale(1.2);
+    border: 10px solid hsl(0, 100%, 35%);
+
 }
 #pfp:hover {
     border: 5px solid white;
@@ -60,11 +62,30 @@ html {
 
 .center {
     text-align: center;
-    font-size: 5rem;
+    font-size: 3rem;
 }
 
 img.center {
     display: block;
     margin-left:auto;
     margin-right: auto;
+}
+
+#textContainer {
+    position: fixed;
+    bottom: 0;
+    background-color: black;
+    font-size: 1.5rem;
+    height:20vh;
+    width: 100%;
+    display: none;
+}
+
+#Location {
+    font-style: italic;
+}
+
+#description {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1rem;
 }

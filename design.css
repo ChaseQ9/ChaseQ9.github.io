@@ -41,7 +41,7 @@ body {
     height: 60px;
     left: 25px;
     top: 40px;
-    border: 1px dashed hsl(0, 0%, 50%);
+    border: 1px solid hsl(0, 0%, 100%);
     border-radius: 50%;
     text-align: center;
     display: inline-block;
