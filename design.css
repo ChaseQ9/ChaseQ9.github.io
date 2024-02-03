@@ -151,7 +151,7 @@ nav li {
     /* display:inline-block; */
     color: white;
     margin-top: 10%;
-    width: 50%;
+    width: 51%;
     text-align: center;
     background-color: hsl(0, 0%, 22%);
 }
@@ -188,6 +188,17 @@ nav li {
     font-weight:350;
 }
 
+.logo {
+    margin: 1%;
+    width: 4%;
+    background-color: white;
+    border-radius: 15px;
+    cursor: pointer;
+    border: 2px solid white;
+}
+.logo:hover {
+    transform: scale(1.2);
+}
 .info {
     margin-top: 10%;
     margin-left: 3%;
