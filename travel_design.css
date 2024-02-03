@@ -14,6 +14,11 @@ html {
     border: 2px solid white;
     border-radius: 15px;
     text-align: center;
+    transform: background-color 0.25
+}
+
+#homeButton:hover {
+    background-color: hsl(0, 0%, 10%);
 }
 #homeReturn {
     font-family: 'Roboto';

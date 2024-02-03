@@ -5,19 +5,18 @@
     <!--Links to script sheet, and stylesheet as well as favicon info-->
     <title>Chase Quigley</title>
     <link rel="icon" href="favicon_stuff/favicon.ico">
-    <script src="script.js"></script>
-    <link rel="styleSheet" href="design.css">
     <script src="https://kit.fontawesome.com/64f4119733.js" crossorigin="anonymous"></script>
 </head>
-<!--onload="load() ADD TO BODY TAG--> 
 <body>
     <div id="wrapper">
         <!--Top navigation Bar-->
         <header class="head">
-            <div class="pfp">
+            <div id="pfp">
+                <a rel="noopener" href="https://www.linkedin.com/in/chase-quigley-1ab310245/" target="_blank">
                     <img src="photos/Chase_Vik.jpeg" alt="Chase in France">
+                </a>
             </div>
-            <span id="headName"> <a href="">CHASE QUIGLEY --Note to Viewer, Website is a WIP! </a></span>
+            <div id="headName"><a href="">CHASE QUIGLEY --Note to Viewer, Website is a WIP! </a></div>
             <nav id="navbar">
                 <ul>
                     <li><a href="">Home</a></li>
@@ -28,37 +27,65 @@
             </nav>
         </header>
         
-        <!--Nav Bar Creation-->
-        <nav id="socials">
-            <ul>
-                <li><a href="https://www.linkedin.com/in/chase-quigley-1ab310245" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
-                <li><a href="https://www.instagram.com/chas_quigley/" title="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href="https://github.com/ChaseQ9" title="Github"><i class="fa-brands fa-github"></i></a></li>
-            </ul>
-        </nav>
-    
-        <div class="container">
+        <div class="container" id="leftSide">
             <h1 id="intro">Hi, I am </h1>
             <div class="typewriter" id="typeText"> CHASE QUIGLEY</div>
         </div>
-        <a href="travel.html" target="_blank"> Check out my travel page!</a>
-        <div id="info">
-            Get To Know Me
-            <hr class="design-line">
-            <pre class="desc">
-    As seen above, my name is Chase Quigley. I am a student at the University of Massachusetts Boston.
-    I am a computer science major with a particular interst in the evolutionary technology of A.I as 
-    well as the evolving field of cybersecurity. I enjoy keeping up to date with the latest technological
-    developments in our world (GPT-5 soon??). Outside of school, I am employed as a technology specialist
-    at Genesis of Braintree. Currently, my hobbiees include playing video games, spending time with friends
-    and family, and also traveling and experiencing what the world has to offer.
-            </pre>
-        </div>
+        
+        <img src="Travel_Photos/NH.jpg" alt="chase in NH" id="picture">
 
-        <footer>
-            <hr id="bottom-line">
-            <p id="copyright">&copy Copyright 2023. Designed by Chase Quigley</p>
-        </footer>
-    </div>
+        <div class="container" id="rightSide">
+            <a href="travel.html" target="_blank">
+                <h1 id="clickable">Check Out My Travel Page!</h1>
+            </a>
+            <p id="subscript">(Click Above)</p>
+        </div>
+        
+        <img src="Travel_Photos/France.jpg" alt="chase in france" id="picture">
+
+        <div class="info">
+            <div id="left">
+                <h3>Get To Know Me</h3>
+                <hr class="line">
+                <p id=info-text> 
+                    Hello World! My name is Chase Quigley. I am a computer science major enrolled at the University of Massachusetts Boston.
+                    I am currently in my sophomore year with an expected graduation of May 2026. Outside of school I work as a technology specialist
+                    at Genesis of Braintree.
+                </p>
+            </div>
+            <div id="left">
+                <h3>Skills</h3>
+                <hr class="line">
+                <p id="info-text">
+                    Some of my skills include, but are not limited to: C, C#, Java, Javascript, HTML, CSS, Swift, SwiftUI, Python,
+                    Bash, Linux, Data Structures & Algorithms, Object-Oriented Programming, Data Analytics, Excel, Sheets, Teamwork, and Customer Satisfaction.
+                </p>
+            </div>
+            <div id="left">
+                <h3> Relevant Coursework</h3>
+                <hr class="line">
+                <pre id="info-text">
+Relevant courses I have taken so far: 
+        CS 110 - An introductoty course teaching the basics of computing. Taught in Python.
+
+        CS 210 - The first introduction into data structures and algorithms. Taught in Java.
+
+        CS 220 - Discrete mathematics course which introduced concepts relevant to computer science such as 
+                       big O notation, algorithm design, and logic gates.
+
+        CS 240 -  This course introduced the C lanuage as a way to introduce students into the idea behind memory and pointers. Taught in C.
+
+        CS 310 - A course building upon CS210, introduced new algorithms, data structures, as well as a broader view on 
+                       algorithmic performance. Taught in *student preference*.
+
+        CS 341 -  A course which dives into computers as embedded systems, assembly language, and interactions between computers. 
+                       Taught in C and assembly.
+                </pre>
+            </div>
+        </div>
+        
+    </div>    
+    <link rel="styleSheet" href="design.css">
+    <script src="script.js"></script>
 </body>
 </html>
