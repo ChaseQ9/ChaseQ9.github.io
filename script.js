@@ -1,54 +1,64 @@
-// Global variables and controllers
-let i = 0;
-let text_counter = 0;
-let load_file = async (filePath) => {
-    const response = await fetch(filePath);
-    if (!response.ok) {
-        throw new Error('HTTP error');
+
+// Fade-in on scroll
+const sections = document.querySelectorAll("section");
+window.addEventListener("scroll", () => {
+    sections.forEach(section => {
+        if(section.getBoundingClientRect().top < window.innerHeight - 100){
+            section.classList.add("visible");
+        }
+    });
+});
+
+// Cursor glow movement
+const cursor = document.querySelector(".cursor-glow");
+document.addEventListener("mousemove", e => {
+    cursor.style.left = e.clientX - 10 + "px";
+    cursor.style.top = e.clientY - 10 + "px";
+});
+
+// Particles
+const canvas = document.getElementById("particles");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particlesArray = [];
+
+class Particle {
+    constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2;
+        this.speedX = (Math.random() - 0.5) * 0.3;
+        this.speedY = (Math.random() - 0.5) * 0.3;
     }
-    const textData = await response.text();
-    return textData;
-}
-
-// Function used to update the header banner as well as the associated description text
-let update_header_text = () => {
-    let headers = ["whoami", "ls projects", "echo \"Hello World\"!"];
-    let descriptions = [];
-    let headerText = document.getElementById("intro-header");         
-    let descriptionText = document.getElementById("intro-descriptions");
-    // Adjust the opacity for the transition between headers & descriptions
-    headerText.style.opacity = 0;
-    descriptionText.style.opacity = 0;
-    setTimeout(() => {
-        headerText.textContent = "> " + headers[text_counter++] ;
-        headerText.style.opacity = 1;
-        load_file("descriptions.txt").then(text => {
-            descriptionText.textContent = text;
-        });
-        descriptionText.style.opacity = 1;
-    }, 500);
-
-
-    if (text_counter >= headers.length) {
-        text_counter = 0;
+    update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
     }
-
+    draw() {
+        ctx.fillStyle = "rgba(55, 59, 55, 0.6)";
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+    }
 }
 
-// Function used to update the profile picture
-let image_swap = () => {
-    let image = document.getElementById("pfp");
-    let images = ["Assets/ice_castles.jpg", "Assets/factorio.png"];
-    image.style.transform = 'rotateY(90deg)';
-    setTimeout(() => {
-        i = (i + 1) % images.length;
-        image.src = images[i];
-        image.style.transform = 'rotateY(0deg)'; 
-    }, 300);
+function init() {
+    for (let i = 0; i < 100; i++) {
+        particlesArray.push(new Particle());
+    }
 }
 
-
-window.onload = () => {
-    setInterval(image_swap, 5000);
-    setInterval(update_header_text, 20_000);
+function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particlesArray.forEach(p => {
+        p.update();
+        p.draw();
+    });
+    requestAnimationFrame(animate);
 }
+
+init();
+animate();

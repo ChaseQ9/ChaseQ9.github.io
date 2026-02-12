@@ -1,19 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chase Quigley Webpage</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name | Portfolio</title>
+<link href="./style.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
-    <div class="flex-container">
-        <div class="header-info-text">
-            <h1 class="introduction-header" id="intro-header"> > echo "Hello World!"</h1>  
-            <h3 id="intro-descriptions">Sample Text</h3>
-        </div>
-        <img src="Assets/ice_castles.jpg" alt="Profile Picture" id="pfp">
-    </div>
-</body>
 
+<canvas id="particles"></canvas>
+
+<nav>
+    <h1>Chase Quigley</h1>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <h2>Hi, I'm <span>Chase Quigley</span></h2>
+    <div class="typing">CyberSecurity Student</div>
+    <button class="btn" onclick="document.querySelector('#projects').scrollIntoView()">View Projects</button>
+</section>
+
+<section id="about" class="about">
+    <h2 class="section-title">About Me</h2>
+    <p>
+        TBD
+    </p>
+</section>
+
+<section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-grid">
+        <div class="project-card">
+            <h3>TBD</h3>
+            <p>TBD</p>
+        </div>
+        <div class="project-card">
+            <h3>TBD</h3>
+            <p>TBD</p>
+        </div>
+        <div class="project-card">
+            <h3>TBD</h3>
+            <p>TBD</p>
+        </div>
+    </div>
+</section>
+
+<section id="notes">
+    <h2 class="section-title">Notes & Mentions</h2>
+    <p>This website was designed mainly by <b>ChatGPT</b> and as a result, I do not take credit for any of the graphical design located within this website.
+        <br>
+    </p>
+</section>
+
+<section id="contact" class="contact">
+    <h2 class="section-title">Contact</h2>
+    <p>Email: <a href="mailto:your@email.com">cjqsoftware@gmail.com</a></p>
+</section>
+
+
+<footer>
+    Chase Quigley | 2026
+</footer>
+<script src="./script.js"></script>
+</body>
+</html>
