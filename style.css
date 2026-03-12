@@ -1,9 +1,11 @@
+
+
 :root {
-    --bg-black: #0a0a0f;
+	--bg-black: #000000;
     --bg-dark: #121218;
     --bg-card: #1a1a22;
     --neon-cyan: #00f0ff;
-    --neon-pink: #ff007c;
+    --neon-red: #880425;
     --text-gray: #b3b3c6;
     --neon-green: #6eff51;
 }
@@ -43,7 +45,6 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(20,20,30,0.6);
     backdrop-filter: blur(12px);
     border-radius: 12px;
     border: 1px solid #222;
@@ -70,7 +71,7 @@ nav a {
 
 nav a:hover {
     color: white;
-    text-shadow: 0 0 8px var(--neon-pink);
+    text-shadow: 0 0 8px var(--neon-red);
 }
 
 @keyframes pulseGlow {
@@ -139,6 +140,10 @@ nav a:hover {
     box-shadow: 0 0 20px var(--neon-cyan);
 }
 
+#no_color_flag:hover {
+	color: #ffffff;
+ 	transition: color 0.8s ease;
+}
 /* SECTIONS */
 section {
     padding: 120px 60px;
@@ -156,8 +161,8 @@ section.visible {
     font-family: 'Orbitron', sans-serif;
     font-size: 36px;
     margin-bottom: 40px;
-    color: var(--neon-pink);
-    text-shadow: 0 0 10px var(--neon-pink);
+    color: var(--neon-red);
+    text-shadow: 0 0 10px var(--neon-red);
 }
 
 /* ABOUT */
@@ -206,9 +211,11 @@ section.visible {
 }
 
 footer {
+	margin-bottom: 5px;
     text-align: center;
     padding: 30px;
     border-top: 1px solid #222;
+	border-radius: 12px;
     background: #0d0d12;
     color: #666;
 }

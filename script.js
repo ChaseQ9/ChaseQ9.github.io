@@ -1,3 +1,8 @@
+let NO_COLOR;
+
+function configure_colors() {
+	console.log("test");
+}
 
 // Fade-in on scroll
 const sections = document.querySelectorAll("section");
@@ -7,13 +12,6 @@ window.addEventListener("scroll", () => {
             section.classList.add("visible");
         }
     });
-});
-
-// Cursor glow movement
-const cursor = document.querySelector(".cursor-glow");
-document.addEventListener("mousemove", e => {
-    cursor.style.left = e.clientX - 10 + "px";
-    cursor.style.top = e.clientY - 10 + "px";
 });
 
 // Particles
@@ -60,5 +58,13 @@ function animate() {
     requestAnimationFrame(animate);
 }
 
-init();
-animate();
+
+window.onload = function() {
+	NO_COLOR = document.getElementById("no_color_flag");
+ 	NO_COLOR.addEventListener("click", function() {
+		console.log("test");
+	});
+
+	init();
+	animate();
+}
