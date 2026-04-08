@@ -36,6 +36,21 @@ ul {
 #intro {
 }
 
+#info-bar {
+	display: flex;
+	visibility: hidden;
+	position: absolute;
+	top: 94%;
+	height: 5%;
+	left: 0%;
+	text-align: center;
+	width: 100%;
+	justify-content: center;
+}
+
+#info-text {
+	height: 100%;
+}
 /* Comment Line for Easy Comment Access */
 /* */
 #entry-div {

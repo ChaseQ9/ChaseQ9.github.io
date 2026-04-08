@@ -99,8 +99,34 @@ function processSimple() {
 function processRegular() {
 	donutCode();	
 	setInterval(enableColorsHeaders, 1000);
+	enableInfoBanner();
+	updateInfoBannerText();
 }
 
+function updateInfoBannerText() {
+	let i = 0;
+	setInterval(() => {
+		if (i < 50) {
+			if (i == 0) {
+				document.getElementById("info-text").textContent = "";
+			}
+			document.getElementById("info-text").textContent += "=";
+			i++;
+			console.log(i);
+		} else {
+			console.log("i is at 50");
+			i = 0;
+			document.getElementById("info-text").textContent = "";
+		}
+	}, 100);
+		
+}
+function enableInfoBanner() {
+	const infoBanner = document.getElementById("info-bar");
+	setTimeout(() => {
+		infoBanner.style.visibility = "visible";
+	}, 500);
+}
 // Logic which controls the animation of the element being removed
 function deleteElement(elem) {
 	if (elem) {
