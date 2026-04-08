@@ -29,8 +29,8 @@ window.onload = () => {
 		removeOptions();
 		processSimple();
 	});
-	regDesc = "Ascii Donut\nCool Colors";
-	simpDesc = "No Distractions\nNo Colors";
+	const regDesc = "Ascii Donut\nCool Colors";
+	const simpDesc = "No Distractions\nNo Colors";
 	Regular.style.whiteSpace = "pre-line";
 	Simple.style.whiteSpace = "pre-line";
 	// Listener for 'hovering' over the div blocks
@@ -43,18 +43,46 @@ window.onload = () => {
 		document.getElementById("simp-desc").textContent = simpDesc;
 	});
 
-	Regular.addEventListener("mouseout", function() {
+	Regular.addEventListener("mouseleave", function() {
 		document.getElementById("reg-desc").textContent = "";
 	});
 
 	// Listener for 'hovering' over the div blocks
-	Simple.addEventListener("mouseout", function() {
+	Simple.addEventListener("mouseleave", function() {
 		document.getElementById("simp-desc").textContent = "";
 	});
 
+	readDataFiles();
 }
 
+function readDataFiles() {
+	const DATA_DIR = "./data/";
+	const ABOUTME = "about-me.json";
+	const CONTACTME = "contact-me.json"
+	const PROJECTS = "projects.json";
+	const EXPERIENCE = "experience.json";
+	const files = [ABOUTME, CONTACTME, PROJECTS, EXPERIENCE];	
 
+	for (const file of files) {
+		_readDataFile(DATA_DIR + file).then((result) => {
+			console.log(result);
+		});	
+	}
+	
+}
+async function _readDataFile(fileName) {
+	let result;
+	try {
+		const response = await(fetch(fileName));
+		if (!response.ok) {
+			throw new Error("Response Status: " + respose.status);
+		}
+		result = await response.json();
+	} catch (error) {
+		console.error(error.message);
+	}
+	return result; 
+}
 function enableColorsHeaders() {
 	Projects.classList.add('animate-text');
 	AboutMe.classList.add('animate-text');

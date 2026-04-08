@@ -5,7 +5,25 @@ html {
 	overflow: hidden;
 }
 
+a:visited {
+	text-decoration: none;
+	color: white;
+	cursor: pointer;
+}
+
+a:link {
+	text-decoration: none;
+	color: white;
+	cursor: pointer;
+}
+a:hover {
+	text-decoration: none;
+	color: white;
+	cursor: pointer;
+}
+
 ul {
+
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
