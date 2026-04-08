@@ -1,76 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Chase Quigley |</title>
-		<link href="style.css" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
-
+		<meta charset='UTF-8'>
+		<title>Chase Quigley</title>
+		<link rel="stylesheet" href="./style.css">
+		<link rel="icon" href="./favicon.ico" type="image/x-icon">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
 	</head>
 	<body>
-
-		<canvas id="particles"></canvas>
-
-		<nav>
-			<h1>Chase Quigley</h1>
-			<h1 id="no_color_flag">:NO_COLOR</h1>
-			<ul>
-				<li><a href="#about">About</a></li>
-				<li><a href="#projects">Projects</a></li>
-				<li><a href="#contact">Contact</a></li>
-			</ul>
-		</nav>
-
-		<section class="hero">
-			<h2>Hi, I'm <span>Chase Quigley</span></h2>
-			<div class="typing">CyberSecurity Student</div>
-			<button class="btn" onclick="document.querySelector('#projects').scrollIntoView()">View Projects</button>
-		</section>
-
-		<section id="about" class="about">
-			<h2 class="section-title">About Me</h2>
-			<p>
-			TBD
-			</p>
-		</section>
-
-		<section id="projects">
-			<h2 class="section-title">Projects</h2>
-			<div class="projects-grid">
-				<div class="project-card">
-					<h3>TBD</h3>
-					<p>TBD</p>
+		<div id="entry-div">
+			<h1 id="intro">Choose Your View</h1>
+			<div id="options">
+				<div class="option-box" id="div-simp">
+					<h2>Simple</h2>
+					<p id='simp-desc'></p>
 				</div>
-				<div class="project-card">
-					<h3>TBD</h3>
-					<p>TBD</p>
-				</div>
-				<div class="project-card">
-					<h3>TBD</h3>
-					<p>TBD</p>
+				<div class="option-box" id="div-reg">
+					<h2>Regular</h2>
+					<p id='reg-desc'></p>
 				</div>
 			</div>
-		</section>
-
-		<section id="notes">
-			<h2 class="section-title">Notes & Mentions</h2>
-			<p>This website was designed mainly by <b>ChatGPT</b> and as a result, I do not take credit for any of the graphical design located within this website. As I do not have any aspirations of becoming a UI/UX developer, this is a decision I am okay with. All code within this website has been manually reviewed by me. 
-			<br>
-			</p>
-		</section>
-
-		<section id="contact" class="contact">
-			<h2 class="section-title">Contact</h2>
-			<p>Email: <a href="mailto:your@email.com">cjqsoftware@gmail.com</a></p>
-			<p>LinkedIn: <a href="https://linkedin.com/in/chase-quigley-1ab310245">Chase Quigley</a></p>
-		</section>
-
-
-		<footer>
-			Chase Quigley | 2026
-		</footer>
-		<script src="script.js"></script>
+		</div>
+		<div id="setup-div">
+			<div id="left-div">
+				<div id="about-me" class="info">
+					<h3>About Me</h3>
+					<p id="about-me-text"></p>
+				</div>
+				<div id="projects" class="info">
+					<h3>Projects</h3>
+					<p id="projects-text"></p>
+				</div>
+				<nav>
+					<ul>
+						<li>GitHub</li>
+						<li>Resume</li>
+					</ul>
+				</nav>
+			</div>
+			<div id="center-div">
+				<h2>Chase Quigley</h2>
+				<pre id="donut">
+				</pre>
+			</div>
+			<div id="right-div">
+				<div id="contact-info" class="info">
+					<h3>Contact Info</h3>
+					<p id="contact-text"></p>
+				</div>
+				<div id="experience" class="info">
+					<h3>Experience</h3>
+					<p id="experience-text"></p>
+				</div>
+				<nav>
+					<ul>
+						<li>Useful Links</li>
+						<li>Writings</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<script src="script.js"> </script>
 	</body>
 </html>
+
