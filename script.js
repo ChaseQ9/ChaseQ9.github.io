@@ -6,6 +6,7 @@ let Projects;
 let AboutMe;
 let ContactInfo;
 let Experience;
+let SIMPLE = false;
 
 window.onload = () => {
 
@@ -52,7 +53,38 @@ window.onload = () => {
 		document.getElementById("simp-desc").textContent = "";
 	});
 
+	Projects.addEventListener("click", function() {
+		expandDiv(Projects);
+		console.log("double clicked");
+	});
+
+	// Listener for 'hovering' over the div blocks
+	AboutMe.addEventListener("click", function() {
+		expandDiv(AboutMe);
+	});
+
+	Experience.addEventListener("click", function() {
+		expandDiv(Experience)
+	});
+
+	ContactInfo.addEventListener("click", function() {
+		expandDiv(ContactInfo);
+	});
 	readDataFiles();
+}
+
+function expandDiv(elem) {
+	elem.classList.toggle("expanded");
+	elem.parentElement.classList.toggle("expanded");
+	if (elem.parentElement.id === "right-div") {
+		elem.style.left = "15%";
+	} else {
+		elem.style.left = "0%";
+	}
+	if (SIMPLE) {
+		elem.style.transition = 'none';
+	}
+	document.getElementById("backdrop").classList.toggle("not-visible");
 }
 
 function readDataFiles() {
@@ -91,8 +123,7 @@ function enableColorsHeaders() {
 }
 
 function processSimple() {
-
-	view_flags.show_donut = false;	
+	SIMPLE = true;	
 	console.log(view_flags);
 }
 
@@ -106,15 +137,10 @@ function processRegular() {
 function updateInfoBannerText() {
 	let i = 0;
 	setInterval(() => {
-		if (i < 50) {
-			if (i == 0) {
-				document.getElementById("info-text").textContent = "";
-			}
+		if (i < window.innerWidth / 10) {
 			document.getElementById("info-text").textContent += "=";
 			i++;
-			console.log(i);
 		} else {
-			console.log("i is at 50");
 			i = 0;
 			document.getElementById("info-text").textContent = "";
 		}
