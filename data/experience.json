@@ -1,3 +1,8 @@
 {
-	"Work": "ISO New England"
+	"Internship": "ISO New England",
+	"Work": "ISO New England",
+	"Title": "SOC Analyst",
+	"Skills": {
+		"Languages": ["C", "Python", "Bash", "HTML/CSS/JS"]
+	}
 }

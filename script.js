@@ -4,7 +4,7 @@ let Simple;
 let Donut;
 let Projects;
 let AboutMe;
-let ContactInfo;
+let ContactMe;
 let Experience;
 let SIMPLE = false;
 
@@ -16,20 +16,23 @@ window.onload = () => {
 	Donut = document.getElementById("donut");
 	Projects = document.getElementById("projects");
 	AboutMe = document.getElementById("about-me");
-	ContactInfo = document.getElementById("contact-info");
+	ContactMe = document.getElementById("contact-me");
 	Experience = document.getElementById("experience");
 
 	Regular.addEventListener("click", function() {
 		console.log("Regular clicked");
 		removeOptions();
 		processRegular();
+		readDataFiles();
 	});
 
 	Simple.addEventListener("click", function() {
 		console.log("Simple clicked");
 		removeOptions();
 		processSimple();
+		readDataFiles();
 	});
+
 	const regDesc = "Ascii Donut\nCool Colors";
 	const simpDesc = "No Distractions\nNo Colors";
 	Regular.style.whiteSpace = "pre-line";
@@ -53,24 +56,22 @@ window.onload = () => {
 		document.getElementById("simp-desc").textContent = "";
 	});
 
-	Projects.addEventListener("click", function() {
+	Projects.addEventListener("dblclick", function() {
 		expandDiv(Projects);
-		console.log("double clicked");
 	});
 
 	// Listener for 'hovering' over the div blocks
-	AboutMe.addEventListener("click", function() {
+	AboutMe.addEventListener("dblclick", function() {
 		expandDiv(AboutMe);
 	});
 
-	Experience.addEventListener("click", function() {
+	Experience.addEventListener("dblclick", function() {
 		expandDiv(Experience)
 	});
 
-	ContactInfo.addEventListener("click", function() {
-		expandDiv(ContactInfo);
+	ContactMe.addEventListener("dblclick", function() {
+		expandDiv(ContactMe);
 	});
-	readDataFiles();
 }
 
 function expandDiv(elem) {
@@ -89,19 +90,51 @@ function expandDiv(elem) {
 
 function readDataFiles() {
 	const DATA_DIR = "./data/";
-	const ABOUTME = "about-me.json";
-	const CONTACTME = "contact-me.json"
-	const PROJECTS = "projects.json";
-	const EXPERIENCE = "experience.json";
-	const files = [ABOUTME, CONTACTME, PROJECTS, EXPERIENCE];	
+	const ABOUTME = "about-me";
+	const CONTACTME = "contact-me"
+	const PROJECTS = "projects";
+	const EXPERIENCE = "experience";
+	const files = [ABOUTME, CONTACTME, PROJECTS, EXPERIENCE];
 
-	for (const file of files) {
-		_readDataFile(DATA_DIR + file).then((result) => {
-			console.log(result);
-		});	
+	if (SIMPLE) {
+		console.log("in simple");
+		for (const file of files) {
+			document.getElementById(file, + "-text").style.whiteSpace = "pre";
+			_readDataFile(DATA_DIR + file + ".json").then((result) => {
+				for (const [key, value] of Object.entries(result)) {
+					if (typeof value === 'object' && !Array.isArray(value)) {
+						document.getElementById(file + "-text").textContent += `\n${key} section\n`;
+						for (const [subkey, subvalue] of Object.entries(value)) {
+								document.getElementById(file + "-text").textContent += `${subkey} : ${subvalue}\n`;
+						}
+					} else {
+						document.getElementById(file + "-text").textContent += `${key} : ${value}\n`;
+					}
+				}
+			});
+		}
+	} else {
+		for (const file of files) {
+			document.getElementById(file, + "-text").style.whiteSpace = "pre";
+			_readDataFile(DATA_DIR + file + ".json").then((result) => {
+				document.getElementById(file + "-text").textContent +=  `${file} = {\n`;
+				for (const [key, value] of Object.entries(result)) {
+					if (typeof value === 'object' && !Array.isArray(value)) {
+						document.getElementById(file + "-text").textContent +=  `\t${key} : {\n`;
+						for (const [subkey, subvalue] of Object.entries(value)) {
+								document.getElementById(file + "-text").textContent += `\t\t${subkey} : ${subvalue}\n`;
+						}
+						document.getElementById(file + "-text").textContent +=  "\t}\n";
+					} else {
+						document.getElementById(file + "-text").textContent += `\t${key} : ${value}\n`;
+					}
+				}
+				document.getElementById(file + "-text").textContent +=  "};";
+			});
+		}
 	}
-	
 }
+
 async function _readDataFile(fileName) {
 	let result;
 	try {
@@ -113,22 +146,21 @@ async function _readDataFile(fileName) {
 	} catch (error) {
 		console.error(error.message);
 	}
-	return result; 
+	return result;
 }
 function enableColorsHeaders() {
 	Projects.classList.add('animate-text');
 	AboutMe.classList.add('animate-text');
-	ContactInfo.classList.add('animate-text');
+	ContactMe.classList.add('animate-text');
 	Experience.classList.add('animate-text');
 }
 
 function processSimple() {
-	SIMPLE = true;	
-	console.log(view_flags);
+	SIMPLE = true;
 }
 
 function processRegular() {
-	donutCode();	
+	donutCode();
 	setInterval(enableColorsHeaders, 1000);
 	enableInfoBanner();
 	updateInfoBannerText();
@@ -145,7 +177,7 @@ function updateInfoBannerText() {
 			document.getElementById("info-text").textContent = "";
 		}
 	}, 100);
-		
+
 }
 function enableInfoBanner() {
 	const infoBanner = document.getElementById("info-bar");
@@ -189,7 +221,7 @@ function donutCode() {
 	*v,h=8*((a*e-l*r*o)*n-l*r*e-a*o-f*r*c)|
 	 0;v<22&&v>=0&&m>=0&&m<79&&B>t[I]&&(t[
 	 I]=B,s[I]=".,-~:;=!*#$@"[h>0?h:0])}}
-	  Donut.innerHTML= 
+	  Donut.innerHTML=
 	  s.join("")},i=setInterval(a,50
 		  );/*=!!!**********!!!==:*/
 			/*~~;EvanZhouDev;;:~*/

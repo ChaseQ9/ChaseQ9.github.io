@@ -1,3 +1,7 @@
 {
-	"name": "Chase Quigley"
+	"Name": "Chase Quigley",
+	"Education": "UMass Boston",
+	"Graduation": "May 2026",
+	"Degree": "Computer Science, BA",
+	"Tooltip": "Double click any info block!"
 }
