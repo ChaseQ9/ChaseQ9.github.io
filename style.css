@@ -66,7 +66,7 @@ ul {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	min-height: 100vh;
+	min-height: 100dvh;
 	flex-direction: column;
 }
 
@@ -82,7 +82,7 @@ ul {
 #setup-div {
 	justify-content: center;
 	display: flex;
-	min-height: 100vh;
+	min-height: 100dvh;
 }
 
 #left-div {
@@ -101,7 +101,7 @@ ul {
 
 #center-div{
 	font-size: 10px;
-	min-height: 100vh;
+	min-height: 100dvh;
 	width: 40%;
 	justify-content: center;
 	align-items: center;
