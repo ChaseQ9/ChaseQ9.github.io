@@ -11,7 +11,7 @@ html {
 	background-color: black;
 	color: white;
 	font-family: "JetBrains Mono", monospace;
-	overflow: hidden;
+	overflow-x: auto;
 }
 
 a:visited {
@@ -80,7 +80,7 @@ ul {
 }
 
 #setup-div {
-	justify-content: center;
+	justify-content: flex-start;
 	display: flex;
 	min-height: 100dvh;
 }
